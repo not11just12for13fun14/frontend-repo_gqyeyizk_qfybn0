@@ -6,10 +6,14 @@ import PropertyDetail from './pages/PropertyDetail';
 import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import SEO from './components/SEO';
+import ChatWidget from './components/ChatWidget';
 
 function App(){
   return (
     <BrowserRouter>
+      <SEO kind="page" slug="home" fallback={{ title: 'Aureum Developments | Luxury Real Estate & Construction in Mexico', description: 'Premium developments, high-end construction, and bespoke services across Mexico.' }} />
+      <ChatWidget />
       <Routes>
         <Route element={<Layout />}> 
           <Route index element={<Home />} />
